@@ -40,7 +40,8 @@ export default function Activities() {
   }, []);
 
   return (
-    <CapabilityCard title="Activities" description="Track student activity minutes and points." loading={loading} error={error} empty={activities.length === 0 && !loading && !error} emptyText="No activities yet.">
+    <CapabilityCard 
+    title="Activities" description="Track student activity minutes and points." loading={loading} error={error} empty={activities.length === 0 && !loading && !error} emptyText="No activities yet.">
       <ul className="list-group list-group-flush">
         {activities.map((activity, index) => (
           <li key={`${activity.type}-${activity.minutes}-${index}`} className="list-group-item">
